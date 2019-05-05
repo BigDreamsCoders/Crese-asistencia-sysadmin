@@ -1,0 +1,9 @@
+.clickableTable{
+    cursor: pointer;
+}
+.clickableTable:hover{
+    background: #ee6e73;
+}
+.clickableTable {
+    cursor: pointer !important;
+}

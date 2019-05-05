@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>crese</title>
+      <link rel="icon" type="image/vnd.microsoft.icon" href="image/favicon.ico">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" 
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+      <link rel = "stylesheet" href="css/admin.css">
+   </head>
+   
+   <body class = "container"> 
+      <h3>Administrador de datos</h3>
+      <div class='row'>
+           
+          </div>   
+      <div class = "row z-depth-1 y-depth-1">
+         <div class = "col s12">
+            <ul class = "tabs">
+               <li class = "tab col s3"><a class = "active" href = "#Manuals">Manuals</a></li>
+               <li class = "tab col s3"><a href = "#Videos">
+                  Videos</a></li>
+               <li class = "tab col s3"><a href = "#FAQs">
+                  FAQs</a></li>
+               <li class = "tab col s3"><a href = "#Admins">Admins</a></li>
+            </ul>
+         </div>
+         <div id = "Manuals" class = "col s12">
+               <div class="row">
+               <div class="input-field col s4">
+                     <select id="selectSearchm" onchange="searchManual()">
+                        <option value="0" selected>CCTV</option>
+                        <option value="1">Cameras</option>
+                        <option value="2">GPS</option>
+                        <option value="3">Access</option>
+                     </select>
+                     <label>Search option</label>
+                     </div>
+            </div>
+            <div class="row">
+            <table class="highlight responsive-table y-depth-1">
+               <thead><th>Name</th><th>SourceType</th><th>DateCreated</th><th>Downloads</th><th>Views</th><th>Shares</th></thead>
+               <tbody id="tablaM"></tbody>
+            </table>
+            </div>
+         </div>
+         <div id = "Videos" class = "col s12">
+            <div class="row">
+               <div class="input-field col s4">
+                     <select id="selectSearchv" onchange="searchVideo()">
+                        <option value="0" selected>CCTV</option>
+                        <option value="1">Cameras</option>
+                        <option value="2">GPS</option>
+                        <option value="3">Access</option>
+                     </select>
+                     <label>Search option</label>
+                    
+                     </div>
+            </div>
+            <div class="row">
+            <table class="highlight responsive-table y-depth-1">
+               <thead><th>Name</th><th>SourceType</th><th>DateCreated</th><th>Downloads</th><th>Views</th><th>Shares</th></thead>
+               <tbody id="tablaV"></tbody>
+            </table>
+            </div>
+         </div>
+         <div id = "FAQs" class = "col s12">
+            <div class="row">
+            <table class="highlight responsive-table y-depth-1">
+               <thead><th>Question</th><th>Answer</th></thead>
+               <tbody id="tablaQ"></tbody>
+            </table>
+            </div>
+         </div>
+         <div id = "Admins" class = "col s12">
+            <div class="row">
+               <table class="highlight responsive-table y-depth-1">
+                  <thead><th>Email</th><th>Role</th><th>DateCreated</th><th>Status</th></thead>
+                  <tbody id="tablaA"></tbody>
+               </table>
+            </div>
+         </div>
+         <button onclick="logOut()"  type='submit' name='btn_logout' class='col  s12 btn btn-small red white-text  waves-effect z-depth-1 y-depth-1 centered '>LogOut</button>
+      </div> 
+      
+      <script src="js/adminManual.js"></script>
+      <script src="js/adminVideo.js"></script>
+      <script src="js/adminFaq.js"></script>
+      <script src="js/adminUser.js"></script>
+   </body>
+</html>
