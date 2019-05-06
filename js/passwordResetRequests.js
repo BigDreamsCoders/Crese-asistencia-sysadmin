@@ -12,7 +12,7 @@ function getUrlParameter(name) {
 
 
 const URL = () =>{
-    const fullURL = "https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newpassword="+password.value+"&verifypassword="+repassword.value
+    const fullURL = "https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword="+password.value+"&verifyPassword="+repassword.value
     return fullURL
 }
 const setParam = () =>{
