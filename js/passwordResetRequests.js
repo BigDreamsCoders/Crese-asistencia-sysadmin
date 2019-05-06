@@ -1,6 +1,7 @@
 const password = document.querySelector("#password");
 const repassword = document.querySelector("#repassword");
 const button = document.querySelector("#resetButton");
+const errorDisplay = document.querySelector("#errorDisplay");
 
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -38,14 +39,14 @@ const resetPassword = () => {
                 window.location.replace("passwordSet.html")
             }
             else{
-                error.innerHTML = res[0].message
+                errorDisplay.innerHTML = res[0].message
             }
         }).catch(error=>{
-            error.innerHTML = error.message
+            errorDisplay.innerHTML = error.message
         });
     }
     else{
-        error.innerHTML = "No token provided"
+        errorDisplay.innerHTML = "No token provided"
     }
 }
 
