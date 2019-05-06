@@ -7,3 +7,23 @@
 .clickableTable {
     cursor: pointer !important;
 }
+
+
+
+.tabs .tab a{
+    color: #1e88e5;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+    background-color:rgba(30, 136, 229, 0.1);
+    color:#1e88e5;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+    background-color: rgba(30, 136, 229, 0.1);
+    color:#1e88e5;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:#1e88e5;
+} /*Col

@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest()
 //CAMBIAR
-const baseURL = "http://localhost:5300/API/v1"
+const baseURL = "https://crese-asistencia.herokuapp.com/API/v1"
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const error = document.querySelector("#errorDisplay");

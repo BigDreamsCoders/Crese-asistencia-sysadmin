@@ -7,7 +7,7 @@ if(!sessionStorage.action || !sessionStorage.info){
 
 
 //CAMBIAR
-const URLuser = "http://localhost:5300/API/v1/user"
+const URLuser = "https://crese-asistencia.herokuapp.com/API/v1/user"
 
 const account = document.querySelector("#account");
 const email = document.querySelector("#email");

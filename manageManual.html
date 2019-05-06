@@ -18,10 +18,12 @@
    <body>
      <div class="container">
          <h3>Manual admin</h3>
-         <a href="admin.html">Go back</a>
-         
-            <div class="row">
-               <div id="content" class="col s12  z-depth-1 y-depth-1">
+         <div class="row">
+               <div id="content">
+                  <div class="col s12 z-depth-1 y-depth-1">
+                     <div class="row">
+                        <a class="col btn btn-small blue white-text  waves-effect z-depth-1 y-depth-1" href="admin.html">Go back</a>
+                     </div>
                     <div class="row">
                             <div class="input-field col s6">
                                  <select id="selectSearchv" onchange="modifyRequest()">
@@ -43,7 +45,7 @@
                               </div>
                    </div>
                   <div class="row">
-                        <div class="input-field col s8">
+                        <div class="input-field col s12">
                               <input placeholder="URL" id="URL" type="url" class="validate">
                               <label for="URL" class="active">Content URL:</label>
                         </div>
@@ -52,14 +54,13 @@
                         <div class="input-field col s8">
                               <input placeholder="TV, Samsung, 2019" id="keywords" type="text" class="validate">
                               <label for="keywords" class="active">Keywords:</label>
+                           </div>
                         </div>
+                     </div>
+                     <button id="action" onclick="endPoint()"  type='submit' name='btn_login' class='col s12 btn btn-small blue white-text  waves-effect z-depth-1 y-depth-1'>Update</button>
                   </div>
-                  <div class='row center'>
-                        <button id="action" onclick="endPoint()" style="margin-left:65px;"  type='submit' name='btn_login' class='col  s6 btn btn-small white black-text  waves-effect z-depth-1 y-depth-1'>Update</button>
-                     </div>  
                </div>
-            </div>
-     </div>
+        </div>
      <script src="js/manageManual.js"></script>
    </body>
 </html>

@@ -7,7 +7,7 @@ if(!sessionStorage.action || !sessionStorage.info){
 
 
 //CAMBIAR
-const URLfaq = "http://localhost:5300/API/v1/faq"
+const URLfaq = "https://crese-asistencia.herokuapp.com/API/v1/faq"
 
 const answer = document.querySelector("#answer");
 const question = document.querySelector("#question");

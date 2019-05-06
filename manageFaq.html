@@ -19,11 +19,12 @@
      <div class="container">
         <div class="row">
             <h3>Faq admin</h3>
-            <a href="admin.html">Go back</a>
-          </div>
-         
             <div class="row">
-               <div id="content" class="col s12 z-depth-1 y-depth-1">
+                  <div id="content">
+                     <div class="col s12 z-depth-1 y-depth-1">
+                        <div class="row">
+                           <a class="col btn btn-small blue white-text  waves-effect z-depth-1 y-depth-1" href="admin.html">Go back</a>
+                        </div>
                      <div class="row">
                            <div class="input-field col s6">
                                  <select id="selectSearchv" onchange="modifyRequest()">
@@ -35,7 +36,7 @@
                                  </div>
                         </div>
                   <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                               <input placeholder="Question" id="question" type="text" class="validate">
                               <label for="question" class="active">Question:</label>
                         </div>
@@ -44,14 +45,13 @@
                         <div class="input-field col s12">
                               <input placeholder="Answer" id="answer" type="text" class="validate">
                               <label for="answer" class="active">Answer:</label>
+                           </div>
                         </div>
+                     </div>
+                     <button id="action" onclick="endPoint()"  type='submit' name='btn_login' class='col s12 btn btn-small blue white-text  waves-effect z-depth-1 y-depth-1'>Update</button>
                   </div>
-                  <div class='row center'>
-                        <button id="action" onclick="endPoint()" style="margin-left:65px;"  type='submit' name='btn_login' class='col  s6 btn btn-small white black-text  waves-effect z-depth-1 y-depth-1'>Update</button>
-                     </div>  
                </div>
-            </div>
-     </div>
+        </div>
      <script src="js/manageFaq.js"></script>
    </body>
 </html>

@@ -6,7 +6,7 @@ if(!sessionStorage.action || !sessionStorage.info){
 }
 
 //CAMBIAR
-const URLmanual = "http://localhost:5300/API/v1/manual"
+const URLmanual = "https://crese-asistencia.herokuapp.com/API/v1/manual"
 
 const name = document.querySelector("#name");
 const URL = document.querySelector("#URL");
