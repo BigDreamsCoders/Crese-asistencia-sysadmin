@@ -9,7 +9,7 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-//CAMBIAR
+
 const URL = () =>{
     const fullURL = "https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?password="+password.value+"&repassword="+repassword.value
     return fullURL
@@ -30,8 +30,6 @@ const setParam = () =>{
 
 const resetPassword = () => {
     const parameters = setParam();
-    console.log(parameters);
-    /*
     if(parameters){
         fetch(URL(search,category), parameters).then(data=>{
         return data.json();
@@ -43,7 +41,7 @@ const resetPassword = () => {
     }
     else{
         error.innerHTML = "No token provided"
-    }*/
+    }
 }
 
 window.onload = () =>{
