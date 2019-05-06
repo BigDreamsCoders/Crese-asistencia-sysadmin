@@ -11,7 +11,7 @@ function getUrlParameter(name) {
 
 
 const URL = () =>{
-    const fullURL = "https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?password="+password.value+"&repassword="+repassword.value
+    const fullURL = "https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?password="+password.value+"&repassword="+verifypassword.value
     return fullURL
 }
 const setParam = () =>{
@@ -32,9 +32,14 @@ const resetPassword = () => {
     const parameters = setParam();
     if(parameters){
         fetch(URL(), parameters).then(data=>{
-        return data.json();
+        return [data.json(), data.status];
         }).then(res=>{
-            window.location.replace("passwordSet.html")
+            if(res[1]==200){
+                window.location.replace("passwordSet.html")
+            }
+            else{
+                error.innerHTML = res[0].message
+            }
         }).catch(error=>{
             error.innerHTML = error.message
         });
