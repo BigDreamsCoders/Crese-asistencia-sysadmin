@@ -6,7 +6,7 @@
     <link rel = "stylesheet"
          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel = "stylesheet" 
-         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+         href = "css//materialize.min.css">
       <script type = "text/javascript"
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <link rel="stylesheet" href="css/index.css">
@@ -15,20 +15,20 @@
   </head>
   <body ng-app="mainModule" ng-controller="mainController">
       <div id="login-page" class="row">
-          <div class="col s12 z-depth-6 card-panel">
+          <div class="s12 z-depth-6 card-panel">
             <form class="login-form">
               <div class="row">
-                <h3 class="center-align">Admin Crese <br> Login</h3>
+                <h3 class="center-align">Crese <br> System Administrator</h3>
               </div>
               <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 m10 offset-m1">
                   <input class="validate" id="username" type="text">
                   <label for="username">Email</label>
                 </div>
               </div>
               <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password">
+                <div class="input-field col s12 m10 offset-m1">
+                  <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                   <label for="password">Password</label>
                 </div>
               </div>
@@ -36,7 +36,7 @@
                   <i class="mdi-alert-error red-text" id="errorDisplay"></i>
               </div>
               <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 ">
                   <a href="#" id="loginButton" onclick="login()" class="btn waves-effect waves-light blue col s12">Login</a>
                 </div>
               </div>

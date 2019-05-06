@@ -34,7 +34,7 @@ const resetPassword = () => {
         fetch(URL(search,category), parameters).then(data=>{
         return data.json();
         }).then(res=>{
-            
+            window.location.replace("passwordSet.html")
         }).catch(error=>{
             error.innerHTML = error.message
         });
