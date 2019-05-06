@@ -33,7 +33,8 @@ const resetPassword = () => {
     const parameters = setParam();
     if(parameters){
         fetch(URL(), parameters).then(data=>{
-        return [data.message, data.status];
+            const jsonData = data.json().then()
+            return [jsonData.message, data.status];
         }).then(res=>{
             if(res[1]==200){
                 window.location.replace("passwordSet.html")
