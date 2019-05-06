@@ -47,7 +47,7 @@ const resetPassword = () => {
 }
 
 window.onload = () =>{
-    button.addEventListener("onclick", ()=>{
+    button.addEventListener("click", ()=>{
         resetPassword();
-    })
+    });
 }
