@@ -26,13 +26,14 @@ const setParam = () =>{
             method:"GET"
         }
     }
-    return null
+    else{return null}
 }
 
 const resetPassword = () => {
     const parameters = setParam();
     if(parameters){
         fetch(URL(), parameters).then(data=>{
+            console.log(data.json);
             return data.status;
         }).then(res=>{
             if(res==200){
