@@ -18,7 +18,7 @@ const URL = () =>{
 const setParam = () =>{
     const token = getUrlParameter("token");
     if(token){
-        return otherParam = {
+        return {
             headers:{
                 "content-type": "application/json; charset=UTF-8",
                 Authorization: "Bearer "+ token
