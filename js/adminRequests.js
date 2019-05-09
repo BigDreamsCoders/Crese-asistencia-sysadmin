@@ -130,7 +130,7 @@ const requestVideos = () => {fetch(URLv(searchv,categoryv), otherParam).then(dat
         row.onclick = function (){
             sessionStorage.info =  JSON.stringify({})
             sessionStorage.action = actionV
-            sessionStorage.category = category
+            sessionStorage.category = categoryv
             window.location.replace("manageVideo.html")
         }
 
@@ -149,7 +149,7 @@ const requestVideos = () => {fetch(URLv(searchv,categoryv), otherParam).then(dat
             row.onclick = function (){
                 sessionStorage.info =  JSON.stringify(element)
                 sessionStorage.action = actionV
-                sessionStorage.category = category
+                sessionStorage.category = categoryv
                 window.location.replace("manageVideo.html")
             }
 
