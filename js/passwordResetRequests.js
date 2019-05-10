@@ -35,10 +35,10 @@ const resetPassword = () => {
                 window.location.replace("passwordSet.html")
             }
             else{
-                errorDisplay.innerHTML = "Check your password"
+                errorDisplay.innerHTML = res.message;
             }
         }).catch(error=>{
-            errorDisplay.innerHTML = error.message
+            errorDisplay.innerHTML = error.message;
         });
     }
     else{
