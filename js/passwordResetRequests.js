@@ -31,7 +31,7 @@ const resetPassword = () => {
     const p1 = password.value;
     const p2 = repassword.value;
     if(parameters){
-        fetch(`https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${p1}+"&verifyPassword=${p2}`, 
+        fetch(`https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${p1}&verifyPassword=${p2}`, 
         parameters).then(data=>{
             return data.status;
         }).then(res=>{
