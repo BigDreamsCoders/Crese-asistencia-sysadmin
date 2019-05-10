@@ -29,7 +29,7 @@ const resetPassword = () => {
     if(parameters){
         fetch(`https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${p1}&verifyPassword=${p2}&token=${token}`, 
         parameters).then(data=>{
-            return data.status;
+            return data.json();
         }).then(res=>{
             if(res==200){
                 window.location.replace("passwordSet.html")
