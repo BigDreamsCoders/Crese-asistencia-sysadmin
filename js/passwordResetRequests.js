@@ -13,15 +13,12 @@ function getUrlParameter(name) {
 
 
 const setParam = () =>{
-    if(token){
-        return {
-            headers:{
-                "content-type": "application/json; charset=UTF-8"
-            },
-            method:"GET"
-        }
+    return {
+        headers:{
+            "content-type": "application/json; charset=UTF-8"
+        },
+        method:"GET"
     }
-    else{return null}
 }
 
 const resetPassword = () => {
