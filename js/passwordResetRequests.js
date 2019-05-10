@@ -33,10 +33,9 @@ const setParam = () =>{
 
 const resetPassword = () => {
     const parameters = setParam();
-    const URL = URL();
+    const concatUrl = URL();
     if(parameters){
-        fetch(URL, parameters).then(data=>{
-            console.log(data.json);
+        fetch(concatUrl, parameters).then(data=>{
             return data.status;
         }).then(res=>{
             if(res==200){
