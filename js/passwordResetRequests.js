@@ -11,12 +11,7 @@ function getUrlParameter(name) {
 };
 
 
-const URL = () =>{
-    console.log(password.value);
-    console.log(repassword.value);
-    const fullURL = `https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${password.value}+"&verifyPassword=${repassword.value}`;
-    return fullURL;
-}
+
 const setParam = () =>{
     const token = getUrlParameter("token");
     if(token){
@@ -33,9 +28,9 @@ const setParam = () =>{
 
 const resetPassword = () => {
     const parameters = setParam();
-    const concatUrl = URL();
     if(parameters){
-        fetch(concatUrl, parameters).then(data=>{
+        fetch(`https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${password.value}+"&verifyPassword=${repassword.value}`, 
+        parameters).then(data=>{
             return data.status;
         }).then(res=>{
             if(res==200){
