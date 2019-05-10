@@ -12,23 +12,26 @@ function getUrlParameter(name) {
 
 
 
-const setParam = () =>{
+const setParam = (bodyString) =>{
     return {
         headers:{
             "content-type": "application/json; charset=UTF-8"
         },
-        method:"GET"
+        method:"POST",
+        body: JSON.stringify(bodyString)
     }
 }
 
 const resetPassword = () => {
-    const parameters = setParam();
-    const p1 = password.value;
-    const p2 = repassword.value;
     const token = getUrlParameter("token");
+    const bodyInfo = {};
+    bodyInfo.newPassword = password.value;
+    bodyInfo.verifyPassword = repassword.value;
+    bodyInfo.token = token;
+    const parameters = setParam(bodyInfo);
     if(parameters){
-        fetch(`https://crese-asistencia.herokuapp.com/API/v1/user/reset-password?newPassword=${p1}&verifyPassword=${p2}&token=${token}`, 
-        parameters).then(data=>{
+        fetch("https://crese-asistencia.herokuapp.com/API/v1/user/reset-password", parameters)
+        .then(data=>{
             return data.json();
         }).then(res=>{
             if(res==200){
