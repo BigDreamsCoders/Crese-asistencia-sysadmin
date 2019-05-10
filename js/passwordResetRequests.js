@@ -17,7 +17,7 @@ const setParam = () =>{
         headers:{
             "content-type": "application/json; charset=UTF-8"
         },
-        method:"POST"
+        method:"GET"
     }
 }
 
