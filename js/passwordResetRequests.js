@@ -33,8 +33,9 @@ const setParam = () =>{
 
 const resetPassword = () => {
     const parameters = setParam();
+    const URL = URL();
     if(parameters){
-        fetch(URL(), parameters).then(data=>{
+        fetch(URL, parameters).then(data=>{
             console.log(data.json);
             return data.status;
         }).then(res=>{
