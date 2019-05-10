@@ -34,7 +34,7 @@ const resetPassword = () => {
         .then(data=>{
             return data.json();
         }).then(res=>{
-            if(res==200){
+            if(res.message=="Password reset"){
                 window.location.replace("passwordSet.html")
             }
             else{
